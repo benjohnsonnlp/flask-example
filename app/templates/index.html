@@ -6,5 +6,11 @@
 </head>
 <body>
 Howdy, {{ name }}!
+Here are your updates:
+<ul>
+    {% for update in updates %}
+       <li>{{update.text}} -- {{update.author}}</li>
+    {% endfor %}
+</ul>
 </body>
 </html>

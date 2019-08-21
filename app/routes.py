@@ -14,4 +14,14 @@ def index():
 @app.route('/templated')
 def templated():
     some_name = "Anuar"  # A normal python variable!
-    return render_template('index.html', name=some_name)
+    posts = [
+        {
+            "text": "Great seeing you today, mate!",
+            "author": "Geetha",
+        },
+        {
+            "text": "Found a great new cookie recipe for you!",
+            "author": "Sebastian",
+        }
+    ]
+    return render_template('index.html', name=some_name, updates=posts)
